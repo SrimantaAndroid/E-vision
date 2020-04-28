@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ContactUs.ContactUsActivity"
+    tools:showIn="@layout/activity_contact_us">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFFFEE"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/contactusheader"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingRight="0dp"
+                android:text="@string/contactus_sub_hedaer" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/iwouldliketoconsult"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/EDX_NAME"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_black_edit"
+            android:gravity="center_vertical"
+            android:hint="@string/yourname"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackhint"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/EDX_EMAIL"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_black_edit"
+            android:gravity="center_vertical"
+            android:hint="@string/youremail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackhint"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/EDX_ph"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_black_edit"
+            android:gravity="center_vertical"
+            android:hint="@string/youreph"
+            android:inputType="phone"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackhint"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/EDX_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_black_edit"
+            android:gravity="center_vertical|top"
+            android:hint="@string/yourquestion"
+            android:inputType="textAutoCorrect"
+            android:minHeight="140dp"
+            android:minLines="4"
+            android:paddingLeft="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blackhint"
+            android:textSize="16sp" />
+
+
+        <Button
+            android:id="@+id/BTN_SAVE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/red"
+            android:padding="10dp"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="@string/followus"></TextView>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:background="@color/black"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/img_facebook"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/facebook"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"></ImageView>
+            <ImageView
+                android:id="@+id/img_twitter"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/twitter"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_whatsapp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/whatsapp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"></ImageView>
+
+            <ImageView
+                android:id="@+id/img_instragram"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/instagram"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"></ImageView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fbshare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:autoLink="web"
+            android:visibility="invisible"
+            android:linksClickable="true"
+            android:text="@string/fbshare"></TextView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

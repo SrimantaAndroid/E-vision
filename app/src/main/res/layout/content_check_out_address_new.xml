@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CartManage.CheckOutAddress"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/billing_addressheader"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_5sdp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/firstname"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/first_name1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/firstname"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/lastname"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/last_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/lastname"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/txt_address"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDX_Address2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/txt_address"
+                    android:minHeight="@dimen/_30sdp"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/country"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TXT_COUNTRY2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingRight="5dp"
+                    android:text="Panama"
+                    android:hint="@string/selectcountry"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blackhint"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/state"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TXT_STATE2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingRight="5dp"
+                    android:hint="@string/selectstate"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blackhint"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/city"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/TXT_CITY2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:paddingRight="5dp"
+                    android:hint="@string/selectcity"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blackhint"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/telephone"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/Ccp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:ccp_defaultNameCode="pa"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    app:ccp_textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/EDX_telephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/telephone"
+                    android:inputType="phone"
+                    android:minLines="1"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/blackhint" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <CheckBox
+            android:id="@+id/CHECKBOXDIFE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/mybillingandshipping" />
+
+        <LinearLayout
+            android:id="@+id/LL_CONF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shippingaddressheader"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_5sdp"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/firstname"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EDX_fname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/firstname"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/lastname"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EDX_lname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:hint="@string/lastname"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/txt_address"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EDX_Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/lastname"
+                android:minLines="2"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/country"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TXT_COUNTRY"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingRight="5dp"
+                android:hint="@string/selectcountry"
+                android:text="Panama"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/state"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TXT_STATE"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:hint="@string/selectstate"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/city"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TXT_CITY"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingRight="5dp"
+                android:hint="@string/selectcity"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/telephone"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--<com.hbb20.CountryCodePicker
+                    android:id="@+id/countyrcodepicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:ccpDialog_keyboardAutoPopup="false"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_countryPreference="in,us,nz,gb,pa"
+                    app:ccp_hintExampleNumber="true" />-->
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/Ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:ccp_defaultNameCode="pa"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    app:ccp_textSize="16sp"/>
+                <EditText
+                    android:id="@+id/EDX_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/lastname"
+                    android:inputType="phone"
+                    android:minLines="1"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/blackhint" />
+
+        </LinearLayout>
+        </LinearLayout>
+        <com.evision.CartManage.CustomMapView
+            android:id="@+id/web_map"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="300dp"></com.evision.CartManage.CustomMapView>
+
+
+
+        <Button
+            android:id="@+id/BTN_NEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_right_arrow_white"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

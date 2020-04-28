@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductList.FilterBottomSheetFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/filterby"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/TXT_MENU_PRICE"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/price"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/TXT_MENU_BRAND"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/brand"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/RL_PRICE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/TXTMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/TXTMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="" />
+
+
+            <!-- <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                 android:id="@+id/rangeSeekbar1"
+                 app:bar_color="#8990C4"
+                 app:bar_highlight_color="#2434AD"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@+id/TXTMax"
+                 android:layout_marginTop="30dp" />-->
+
+
+            <LinearLayout
+                android:id="@+id/seekbar_placeholder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TXTMax"
+                android:orientation="vertical" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/REC_manufact"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BTN_CANCEL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:text="@string/cancel"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/BTN_APPLY"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:text="@string/apply"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

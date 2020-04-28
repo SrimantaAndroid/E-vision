@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Search.SearchFragment">
+    <RelativeLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_43sdp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <RelativeLayout
+            android:id="@+id/rlback"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/IMG_BACK"
+            android:layout_width="@dimen/_11sdp"
+            android:layout_height="@dimen/_11sdp"
+          android:layout_centerInParent="true"
+            android:src="@drawable/left_arrow" />
+</RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/searchproduct"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"></TextView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lltop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="top"
+        app:cardBackgroundColor="@color/blackhint">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/EDX_key"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/IMG_SEARCH"
+                android:background="@drawable/bg_white_roundcorner"
+                android:layout_margin="@dimen/_4sdp"
+                android:padding="@dimen/_5sdp"
+                android:hint="@string/enterkeyword"
+                android:imeOptions="actionSearch"
+                android:singleLine="true" />
+
+            <ImageView
+                android:id="@+id/IMG_SEARCH"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_search_black_24dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/TXT_EMTY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_below="@+id/lltop"
+        android:text="@string/nodatfound"
+        android:visibility="gone" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@+id/VIEWMORE"
+        android:layout_below="@+id/TXT_EMTY">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Rec_listP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+               ></androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/VIEWMORE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+
+        app:cardBackgroundColor="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/MORETXT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="View More 450 Result"
+            android:textColor="@android:color/white" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

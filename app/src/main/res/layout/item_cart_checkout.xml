@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.15"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/TXT_MODEL"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/modelnumber"
+                android:textColor="@color/black" />
+
+     <!--   <TextView
+                android:id="@+id/Coupon_Apply"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:gravity="top"
+                android:padding="@dimen/_1sdp"
+                android:textSize="@dimen/_6sdp"
+                android:text="Coupon Applied"
+                android:layout_weight="1"></TextView>-->
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/TXT_ProductDescription"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/productdescription"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TXT_PRICE"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/price"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TXT_QTY"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/qty"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/TXT_subtotal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1    "
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="@string/subtot"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+</LinearLayout>

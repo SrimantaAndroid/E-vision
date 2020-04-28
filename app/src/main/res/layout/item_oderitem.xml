@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/TXT_ModelNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/modelnumber"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/TXT_DESCRIPTION"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/productdescription"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/TXT_PRICE"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/price"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/TXT_qtyno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/qty"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/TXT_subtotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/subtot"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/black" />
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/TXT_DATE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="19sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TXT_PRICE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TXT_DATE"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TXT_ORDERID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TXT_PRICE"
+        android:text=""
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/TXT_STATTUS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/ic_next"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="@string/selectcity"
+        android:textSize="15sp" />
+
+</RelativeLayout>

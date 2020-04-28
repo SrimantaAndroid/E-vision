@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "183124088625",
+    "firebase_url": "https://e-vision-panama-app.firebaseio.com",
+    "project_id": "e-vision-panama-app",
+    "storage_bucket": "e-vision-panama-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183124088625:android:fab434f373a783dfe00210",
+        "android_client_info": {
+          "package_name": "com.evision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183124088625-o89ephlvn89lmjfe7m6jfji4iob0e9hm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2tXoMTVz198Og_BGdfKGX_nU3yz3ZHoU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183124088625-o89ephlvn89lmjfe7m6jfji4iob0e9hm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

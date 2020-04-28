@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartManage.PaymentActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/BTN_pay"
+            tools:context=".CartManage.CheckOutAddress"
+            tools:showIn="@layout/sss">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chose_payment_method"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/RG_PAY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/RB_CARD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit/Debit Card" />
+
+                    <RadioButton
+                        android:id="@+id/RB_store"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:checked="true"
+                        android:text="Pay in store" />
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/llcardholdername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/cardholdername"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/CARD_HOLDERNAME"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cardholdername" />
+
+                    <TextView
+                        android:id="@+id/tv_Card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/cardtype"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+              <EditText
+                  android:id="@+id/tv_cardtype"
+                  android:inputType="none"
+                  android:clickable="true"
+                  android:editable="false"
+                  android:focusable="false"
+                  android:visibility="gone"
+                  android:focusableInTouchMode="true"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="@string/cardtype">
+
+              </EditText>
+                </LinearLayout>
+
+               <!-- <com.braintreepayments.cardform.view.CardForm
+                    android:id="@+id/CARD_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:visibility="gone"></com.braintreepayments.cardform.view.CardForm>
+-->
+                <!--<com.braintreepayments.cardform.view.CardForm-->
+                <!--android:id="@+id/card_form"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:id="@+id/llcard_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/pay">
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_card"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop = "@dimen/_3sdp"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:id = "@+id/til_card_no"
+                                android:hint = "@string/card_number"
+                                android:digits="1234567890"
+                                android:maxLength="22"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:inputType = "numberDecimal"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_validdate"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop = "@dimen/_3sdp"
+                            android:layout_height="wrap_content">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:id = "@+id/til_expairdate"
+                                android:hint = "@string/card_exp_date"
+                                android:focusable="false"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:inputType = "numberDecimal"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width = "match_parent"
+                            android:layout_height = "wrap_content"
+                            android:id = "@+id/cvvnumber"
+                            android:layout_marginTop = "@dimen/_3sdp"
+
+
+                            >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width = "match_parent"
+                                android:layout_height = "wrap_content"
+                                android:id = "@+id/cvv"
+                                android:hint = "CVV"
+                                android:maxLength="4"
+                                android:paddingLeft="@dimen/_3sdp"
+                                android:inputType = "numberDecimal"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/applycoupon"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/EDX_COUPON"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/applycoupon" />
+
+                <Button
+                    android:id="@+id/EDX_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/apply"
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/revision_text"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/modelnumber" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/productdescription" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1    "
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/price" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1    "
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/qty" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1    "
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="@string/subtot" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RECV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/subtotal" />
+
+                        <TextView
+                            android:id="@+id/subtotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/TACpercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tax" />
+
+                        <TextView
+                            android:id="@+id/tax"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_delivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_delivery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_deliveryamount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/order_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:padding="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="@string/couponappliedoreder"/>
+
+                            <TextView
+                                android:id="@+id/tv_couponamount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/totalprice" />
+
+                        <TextView
+                            android:id="@+id/TOTAL"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:text="" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/BTN_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/red"
+            android:text="@string/procedtopay"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

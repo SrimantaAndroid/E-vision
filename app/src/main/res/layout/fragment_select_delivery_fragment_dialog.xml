@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CartManage.Dialogs.SelectDeliveryFragmentDialog">
+
+    <TextView
+        android:id="@+id/TXT_pickup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/pickupfromstore" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/blackhint" />
+
+    <TextView
+        android:id="@+id/TXT_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/delivery" />
+
+</LinearLayout>

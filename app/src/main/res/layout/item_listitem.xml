@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/IMG_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="2dp" />
+
+            <ImageView
+                android:id="@+id/IMG_avilable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/venta_online"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/TXT_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TXT_ModelNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+            <!-- <TextView
+                 android:layout_width="match_parent"
+                 android:id="@+id/TXT_DESCRIPTION"
+                 android:maxLines="2"
+                 android:textColor="@android:color/black"
+                 android:textSize="15sp"
+                 android:paddingLeft="5dp"
+                 android:paddingBottom="5dp"
+                 android:layout_height="wrap_content" />
+ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TXT_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/SPCLPRICE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/TXT_Add_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/holo_red_light"
+                android:drawableLeft="@drawable/ic_shopping_cart_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:text=" ADD TO CART"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/IMG_item"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary" />
+</LinearLayout>

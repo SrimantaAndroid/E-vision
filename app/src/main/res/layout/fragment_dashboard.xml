@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/SearchTXT"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_white_roundcorner"
+                android:drawableRight="@drawable/ic_search_gray"
+                android:gravity="center_vertical"
+                android:hint="Nueva búsqueda"
+                android:padding="5dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+
+            <com.pixelcan.inkpageindicator.InkPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                app:ipi_animationDuration="320"
+                app:ipi_currentPageIndicatorColor="@android:color/white"
+                app:ipi_dotDiameter="6dp"
+                app:ipi_dotGap="6dp"
+                app:ipi_pageIndicatorColor="@android:color/darker_gray" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_brand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Brand "
+            android:visibility="invisible"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+      <!--  <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_homebrands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/ViewPager_brands"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+
+            <com.pixelcan.inkpageindicator.InkPageIndicator
+                android:id="@+id/indicator_band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:ipi_animationDuration="320"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:ipi_currentPageIndicatorColor="@android:color/white"
+                app:ipi_dotDiameter="6dp"
+                app:ipi_dotGap="6dp"
+                app:ipi_pageIndicatorColor="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</ScrollView>

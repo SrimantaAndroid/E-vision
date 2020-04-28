@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccount.EditAddressFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/firstname" />
+
+            <EditText
+                android:id="@+id/EDX_FN"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/lastname" />
+
+            <EditText
+                android:id="@+id/EDX_LN"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/address1" />
+
+            <EditText
+                android:id="@+id/EDX_ADD"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/address2" />
+
+            <EditText
+                android:id="@+id/EDX_ADD2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/country" />
+
+            <TextView
+                android:id="@+id/TXT_COUNTRY"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Panama"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/state" />
+
+            <TextView
+                android:id="@+id/TXT_STATE"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/city" />
+
+            <TextView
+                android:id="@+id/TXT_CITY"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:drawableRight="@drawable/ic_down_arrow"
+                android:gravity="center_vertical"
+                android:hint="@string/selectcity"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/pincode" />
+
+            <EditText
+                android:id="@+id/EDX_PIN"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:text="@string/mobile_no" />
+
+            <EditText
+                android:id="@+id/EDX_MOB"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_black_edit"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:paddingLeft="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/blackhint"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/BTN_SAVE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
